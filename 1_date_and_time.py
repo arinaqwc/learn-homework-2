@@ -9,19 +9,25 @@
 """
 
 def print_days():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    from datetime import datetime, timedelta
+    dt_now=datetime.now()
+    today=dt_now.data()
+    delta=timedelta(days=1)
+    yes=today-delta
+    tom=today+delta
+    delta2=timedelta(days=30)
+    mon=today+delta2
+    print(yes, tom,mon)
+
+
+ 
 
 
 def str_2_datetime(date_string):
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    string=date_string
+    string= datetime.strptime(string, '%d/%m/%y %H:%M:%S.%f')
+    return string
+
 
 if __name__ == "__main__":
     print_days()
