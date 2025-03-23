@@ -11,18 +11,23 @@
 def print_days():
     from datetime import datetime, timedelta
     dt_now=datetime.now()
+    today=dt_now.data()
     delta=timedelta(days=1)
-    yes=dt_now-delta
-    tom=dt_now+delta
+    yes=today-delta
+    tom=today+delta
     delta2=timedelta(days=30)
-    mon=dt_now+delta2
-print(yes,tom,mon)
+    mon=today+delta2
+    print(yes, tom,mon)
+
+
  
 
 
 def str_2_datetime(date_string):
-    string="01/01/20 12:10:03.234567"
-    datetime.strptime(string, '%d/%m/%y %H:%M:%S.%f')
+    string=date_string
+    string= datetime.strptime(string, '%d/%m/%y %H:%M:%S.%f')
+    return string
+
 
 if __name__ == "__main__":
     print_days()

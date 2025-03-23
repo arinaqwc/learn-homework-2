@@ -15,8 +15,8 @@ def main():
     with open('referar.txt', 'r', encoding='utf-8') as f:
         text=f.read()
         print(f'Длина строки: {len(text)}')
-        text=text.split()
-        print(f'В тексте: {len(text)} слов')
+        words=text.split()
+        print(f'В тексте: {len(words)} слов')
         text=text.replace('.','!')
     with open('referat2.txt', 'w', encoding='utf-8') as f:
         f.write(text)
